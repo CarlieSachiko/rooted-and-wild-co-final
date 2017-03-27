@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="description" content="Rooted and Wild Co. is an Orange County based floral designer.">
+    <meta name="author" content="Mackenzie Myers">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- My CSS -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Abel|Lato|Muli|Noto+Sans|Oswald" rel="stylesheet">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/1d5b93560c.js"></script>
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-resource.min.js"></script>
+  </head>
+  <body ng-app="app">
+
+    <nav class="navbar navbar-default text-center">
+      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">menu</a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!-- <li><a class="nav-link" ui-sref="home.index">HOME</a></li> -->
+          <li><a class="nav-link" ui-sref="about">about</a></li>
+          <li><a id="mid-nav" class="nav-link" ui-sref="blog">blog</a></li>
+          <li><a ui-sref="home" id="nav-logo-img"><img src="images/R&W-logo.png" alt="R&W logo" id="nav-logo-img"></a></li>
+          <li><a class="nav-link" ui-sref="work">work</a></li>
+          <li><a class="nav-link" ui-sref="contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="logo-div"><a ui-sref="home"><img src="images/R&W-logo.png" alt="R&W logo" class="center-block" id="logo-img"></a></div>
+
+    <div ui-view></div>
+
+    <footer class="footer footer-fixed-to-bottom container">
+    <div class="pull-left web-credit">
+      Website created by <a href="http://www.carliesachiko.com" target="_blank">Carlie Clippinger.</a>
+    </div>
+      <div class="pull-right">
+        <span><a href="https://www.pinterest.com/rootedandwildco/" target="_blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Pinterest"></a></span>
+        <span><a href="https://www.facebook.com/rootedandwildco/" target="_blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Facebook"></a></span>
+        <span><a href="https://instagram.com/rootedandwildco" target="_blank"><img id="ig" src="images/ig-logo.png" alt="Rooted and Wild Instagram"></a></span>
+      </div>
+    </footer>
+
+     <script src="javascripts/main.js"></script>
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- My JS -->
+    <!-- <script src="js/all.js"></script> -->
+    <script src="javascripts/app.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/filters.js"></script>
+    <script src="javascripts/dirPagination.js"></script>
+    <script src="javascripts/controllers/main-controller.js"></script>
+    <script src="javascripts/controllers/user-controller.js"></script>
+    <script src="javascripts/controllers/contact-controller.js"></script>
+    <script src="javascripts/controllers/blog-controller.js"></script>
+    <script src="javascripts/controllers/show-blog-controller.js"></script>
+    <script src="javascripts/services/contact-service.js"></script>
+    <script src="javascripts/services/user-service.js"></script>
+    <script src="javascripts/services/blog-service.js"></script>
+    <script src="javascripts/services/comment-service.js"></script>
+    <script src="javascripts/services/add-comment-service.js"></script>
+    <script src="javascripts/services/auth-interceptor.js"></script>
+    <script src="javascripts/services/token-service.js"></script>
+    <script src="javascripts/services/like-service.js"></script>
+
+    <!-- INSTAFEED -->
+    <script src="../javascripts/instafeed.min.js"></script>
+
+  </body>
+</html>

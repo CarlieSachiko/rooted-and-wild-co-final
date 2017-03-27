@@ -1,0 +1,34 @@
+<div id="contact">
+  <h3 class="text-center">Contact</h3>
+  <div class="contact-text">
+    Want to work together? I offer styling and floral design for events of all kinds, weddings, birthday parties, baby showers, and so on. You name, I can do it. Fill out the form below or reach out to me directly at <span><a href="mailto:rootedandwildco@gmail.com?Subject=Rooted%20and%20Wild" target="_top">rootedandwildco@gmail.com</a></span>.
+  </div>
+
+  <div id="contact-form">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Name" ng-model="contactCtrl.name" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email</label>
+        <input name="email" type="email" class="form-control" id="email" placeholder="Email" ng-model="contactCtrl.email" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Subject</label>
+        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" ng-model="contactCtrl.subject" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <textarea name="message" type="text" class="form-control" rows="6" id="message" ng-model="contactCtrl.message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-default" ng-click="contactCtrl.sendEmail()">Submit</button>
+      <br>
+      <br>
+      <div id="form-messages"></div>
+    </form>
+    <p ng-show="contactCtrl.sentMsg">Thank you for your email! I'll get back to you as soon as possible.</p>
+    {{contactCtrl.test}}
+  </div>
+</div>
+
