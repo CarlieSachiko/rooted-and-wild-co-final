@@ -4,7 +4,7 @@
     <title><%= title %></title>
     <meta name="description" content="Rooted and Wild Co. is an Orange County based floral designer.">
     <meta name="author" content="Mackenzie Myers">
-    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -19,9 +19,6 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <!-- Font Awesome CDN -->
     <script src="https://use.fontawesome.com/1d5b93560c.js"></script>
-    <!-- Toastr -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -34,7 +31,6 @@
       <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">menu</a>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <!-- <li><a class="nav-link" ui-sref="home.index">HOME</a></li> -->
           <li><a class="nav-link" ui-sref="about">about</a></li>
           <li><a id="mid-nav" class="nav-link" ui-sref="blog">blog</a></li>
           <li><a ui-sref="home" id="nav-logo-img"><img src="images/R&W-logo.png" alt="R&W logo" id="nav-logo-img"></a></li>
@@ -49,9 +45,9 @@
     <div ui-view></div>
 
     <footer class="footer footer-fixed-to-bottom container">
-    <div class="pull-left web-credit">
-      Website created by <a href="http://www.carliesachiko.com" target="_blank">Carlie Clippinger.</a>
-    </div>
+      <div class="pull-left web-credit">
+        Website created by <a href="http://www.carliesachiko.com" target="_blank">Carlie Clippinger.</a>
+      </div>
       <div class="pull-right">
         <span><a href="https://www.pinterest.com/rootedandwildco/" target="_blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Pinterest"></a></span>
         <span><a href="https://www.facebook.com/rootedandwildco/" target="_blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Facebook"></a></span>
@@ -59,13 +55,10 @@
       </div>
     </footer>
 
-     <script src="javascripts/main.js"></script>
-
     <!-- Slick JS -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- My JS -->
-    <!-- <script src="js/all.js"></script> -->
     <script src="javascripts/app.js"></script>
     <script src="javascripts/main.js"></script>
     <script src="javascripts/filters.js"></script>
@@ -83,7 +76,6 @@
     <script src="javascripts/services/auth-interceptor.js"></script>
     <script src="javascripts/services/token-service.js"></script>
     <script src="javascripts/services/like-service.js"></script>
-
     <!-- INSTAFEED -->
     <script src="../javascripts/instafeed.min.js"></script>
 

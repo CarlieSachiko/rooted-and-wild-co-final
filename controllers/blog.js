@@ -34,19 +34,6 @@ function updatePost(req, res, next) {
     });
 }
 
-// function showPost(req, res, next) {
-//   // declare a variable to hold the "show" post and the ids of the "next" post and the "prev" post
-//   // var results;
-//   // fetch the "show" post
-//   Post.findById(req.params.id).exec()
-//   .then(showPost => {
-//     // var results;
-//     // results.showPost = showPost;
-//     // find the "next" post after the "show" doc
-//     res.json(showPost);
-//   }).catch(err => res.status(400).json(err));
-// }
-
 function showPost(req, res, next) {
   // declare a variable to hold the "show" post and the ids of the "next" post and the "prev" post
   var results = {};

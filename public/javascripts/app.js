@@ -41,7 +41,7 @@ function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
       controller: 'BlogController as blogCtrl'
     })
     .state('show-blog', {
-      url: '/blog/:postId',
+      url: '/blog/:postTitle/:postId',
       templateUrl: 'templates/show-blog.html',
       controller: 'ShowBlogController as showBlogCtrl'
     })

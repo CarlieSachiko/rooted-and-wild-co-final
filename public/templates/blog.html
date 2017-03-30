@@ -1,9 +1,8 @@
 <div id="blog" class="container">
   <div class="row">
     <div class="col-sm-9">
-      <!-- <div ng-repeat="post in blogCtrl.posts | orderBy: 'post.createdAt':true track by $index"> -->
       <div dir-paginate="post in blogCtrl.posts | itemsPerPage: 3 | orderBy: 'post.createdAt':true track by $index">
-        <a ui-sref="show-blog({postId: post._id})"><h3>{{post.title}}</h3></a>
+        <a ui-sref="show-blog({postTitle: post.url_title, postId: post._id})"><h3>{{post.title}}</h3></a>
         <p>{{post.date}}</p>
         <hr>
         <p ng-repeat="paragraph in post.paragraphs">{{paragraph}}</p>
@@ -25,8 +24,6 @@
     <div class="col-sm-2 pull-right instafeed">
       <h4>Connect</h4>
       <div id="instafeed"></div>
-      <!-- IG Feed -->
-      <!-- <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0e6287206a025a00bfdc1a53e39578a8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe> -->
       <span><a href="https://www.pinterest.com/rootedandwildco/" target="blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Co Pinterest"></a></span>
       <span><a href="https://www.facebook.com/rootedandwildco/" target="blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Co Facebook"></a></span>
       <span><a href="https://instagram.com/rootedandwild" target="blank"><img id="ig" src="images/ig-logo.png" alt="Rooted and Wild Co IG"></a></span>
@@ -34,7 +31,7 @@
 
   </div>
   <a href="javascript:" id="return-to-top"><p>Back to top</p></a>
-  <dir-pagination-controls id="return-to-top"></dir-pagination-controls>
+  <dir-pagination-controls></dir-pagination-controls>
 </div>
 
 <script type="text/javascript">
@@ -50,7 +47,13 @@
 
     $('#return-to-top').click(function() {
       $('body,html').animate({
-          scrollTop : 0                       // Scroll to top of body
+          scrollTop : 0
+      }, 500);
+    });
+
+    $('dir-pagination-controls ul#pagnation li#ng-scope a').click(function() {
+      $('body,html').animate({
+          scrollTop : 0
       }, 500);
     });
   });

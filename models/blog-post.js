@@ -10,7 +10,7 @@ var commentSchema = new mongoose.Schema({
 var blogPostSchema = new mongoose.Schema({
   title: String,
   paragraphs: [String],
-  // comments: [{type: Schema.Types.ObjectId, ref:"Comment"}],
+  url_title: String,
   comments: [commentSchema],
   likes: Number,
   images:[String],

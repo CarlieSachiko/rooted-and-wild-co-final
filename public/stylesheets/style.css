@@ -126,37 +126,11 @@ div#logo-div {
   display: none;
 }
 
-@media screen and (max-width:767px) {
-  .navbar-toggle {
-    display: inline-block;
-    padding: 10px !important;
-  }
-  nav.navbar {
-    border-bottom: #E1E1E1 1px solid;
-    height: 57px;
-  }
-  .nav-link {
-    margin-top: 0;
-  }
-  a#nav-logo-img {
-    display: none;
-  }
-  div#logo-div {
-    display: block;
-  }
-}
-
 /*HOME STATE*/
 .slider {
   margin-top: -30px;
   margin-bottom: 10px;
   height: 75vh;
-}
-
-@media screen and (max-width:768px) {
-  .slider {
-    margin-top: 30px;
-  }
 }
 
 .slide1,.slide2,.slide3,.slide4,.slide5 {
@@ -223,27 +197,8 @@ img#about-img {
   margin-bottom: 20vh;
 }
 
-html {
-  height: 100vh;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 div.row.about {
   margin: auto;
-}
-
-@media screen and (max-width:768px) {
-  img#about-img {
-    width: 330px;
-  }
-  #about {
-    height: none;
-  }
 }
 
 /*CONTACT STATE*/
@@ -266,19 +221,7 @@ div#contact-form {
 #work {
   margin-bottom: 20px;
   margin-top: -20px;
-  overflow-x: hidden
-}
-
-@media screen and (max-width:767px) {
-  #work {
-    margin-top: 5px;
-  }
-  #work-imgs {
-    display: none;
-  }
-  #sm-work-imgs {
-    display: block !important;
-  }
+  overflow-x: hidden;
 }
 
 #sm-work-imgs {
@@ -286,7 +229,7 @@ div#contact-form {
 }
 
 .work-img {
-  max-height: 600px;
+  height: 600px;
 }
 
 .slideshow-img {
@@ -344,13 +287,6 @@ div#slider figure {
   color: black !important;
 }
 
-@media screen and (max-width:767px) {
-  div.instafeed {
-    display: none;
-  }
-}
-
-
 /*SHOW-BLOG STATE*/
 .show-blog {
   width: 90% !important;
@@ -381,92 +317,102 @@ div#slider figure {
   cursor: pointer;
 }
 
-/*SHOP NAV*/
-.shop-navbar {
-  height: 50px ;
-  border: none;
-  border-bottom: #E1E1E1 1px solid ;
-}
-
-.navbar-shop-header {
-  float: none;
-}
-
-.shop-nav, .shop-inner-nav {
-  display: block !important;
-  margin-top: -20px !important;
-}
-
+/*RESPONSIVE ELEMENTS*/
 @media screen and (max-width:768px) {
-  .shop-nav, .shop-inner-nav {
-    display: block !important;
-    margin-top: -10px !important;
+  /*WORK*/
+  .slider {
+    margin-top: 30px;
+  }
+
+  /*ABOUT*/
+  #about{
+    margin-bottom: 44vh !important;
   }
 }
 
-.shop-inner-nav {
-  background-color: transparent !important;
+@media screen and (max-width:767px) {
+  /*NAV*/
+  .navbar-toggle {
+    display: inline-block;
+    padding: 10px !important;
+  }
+  nav.navbar {
+    border-bottom: #E1E1E1 1px solid;
+    height: 57px;
+  }
+  .nav-link {
+    margin-top: 0;
+  }
+  a#nav-logo-img {
+    display: none;
+  }
+  div#logo-div {
+    display: block;
+  }
+
+  /*BLOG*/
+  div.instafeed {
+    display: none;
+  }
+
+  /*CONTACT*/
+  #contact {
+    margin-bottom: 22vh;
+  }
 }
 
-.shop-nav-link:hover {
-  background-color: white !important;
+@media screen and (max-width:1024px) {
+  /*CONTACT*/
+  #contact {
+    margin-bottom: 41vh;
+  }
+
+  /*WORK*/
+  #work {
+    margin-top: 5px;
+    overflow-x: hidden;
+  }
+  #work-imgs {
+    display: none;
+  }
+  #sm-work-imgs {
+    display: block !important;
+  }
+
+  /*ABOUT*/
+  #about{
+    margin-bottom: 54.5vh;
+  }
 }
 
-/*SHOP HOME STATE*/
-.filters {
-  margin-bottom: -20px;
+@media screen and (min-width:1500PX) {
+  /*HOME*/
+  .slider {
+    height: 80vh;
+  }
+  .slide1,.slide2,.slide3,.slide4,.slide5 {
+    height: 80vh;
+  }
+
+  /*WORK*/
+  .work-img {
+    height: 770px !important;
+  }
+
+  /*CONTACT*/
+  #contact {
+    margin-bottom: 21.5vh;
+  }
+  div.contact-text {
+    width: 50%;
+  }
+  div#contact-form {
+    width: 60%;
+  }
+
+  /*ABOUT*/
+  #about{
+    margin-bottom: 37.5vh;
+  }
+
 }
-
-#bouquet-img {
-  max-height: 300px;
-}
-
-.shop-home {
-  margin-top: -30px;
-}
-
-.bouq-thumbnail {
-  border: none;
-}
-
-/*BOUQUET SHOW STATE*/
-.show-bouquet {
-  height: 73vh;
-}
-
-/*CART STATE*/
-.cart {
-  height: 73vh;
-}
-
-#cart-total {
-  border-left: 1px solid black;
-
-}
-
-/*CHECKOUT STATE*/
-.select {
-  border-radius: 0 !important;
-}
-
-/*CONFIRM STATE*/
-.confirm {
-  height: 73vh;
-}
-
-/*ORDER-HISTORY STATE*/
-
-/*LOGIN STATE*/
-div#login {
-  height: 70vh;
-  width: 80vh;
-}
-
-/*SIGNUP STATE*/
-div#signup {
-  height: 70vh;
-  width: 80vh;
-}
-
-
-

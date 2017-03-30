@@ -32,8 +32,8 @@
   </div> -->
   <hr>
   <div class="row">
-    <div class="col-xs-6"><a ng-show="showBlogCtrl.nextPost" ui-sref="show-blog({postId: showBlogCtrl.nextPost._id})" class="blog-toggles">⟵ {{showBlogCtrl.nextPost.title}}</a></div>
-    <div class="col-xs-6"><a ng-show="showBlogCtrl.prevPost" ui-sref="show-blog({postId: showBlogCtrl.prevPost._id})" class="pull-right blog-toggles">{{showBlogCtrl.prevPost.title}} ⟶</a></div>
+    <div class="col-xs-6"><a ng-show="showBlogCtrl.nextPost" ui-sref="show-blog({postTitle: showBlogCtrl.nextPost.url_title, postId: showBlogCtrl.nextPost._id})" class="blog-toggles">⟵ {{showBlogCtrl.nextPost.title}}</a></div>
+    <div class="col-xs-6"><a ng-show="showBlogCtrl.prevPost" ui-sref="show-blog({postTitle: showBlogCtrl.prevPost.url_title, postId: showBlogCtrl.prevPost._id})" class="pull-right blog-toggles">{{showBlogCtrl.prevPost.title}} ⟶</a></div>
   </div>
   <div class="add-comment">
     <h3>Comments ({{showBlogCtrl.post.comments.length}})</h3>
