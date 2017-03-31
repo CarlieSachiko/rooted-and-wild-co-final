@@ -5,9 +5,9 @@
   <p>{{showBlogCtrl.post.date}}</p>
   <hr>
   <p ng-repeat="paragraph in showBlogCtrl.post.paragraphs">{{paragraph}}</p>
-  <p>xo. Mackenzie</p>
+  <p>Cheers, <br>Mackenzie</p>
 
-  <div class="center-block" ng-repeat="img in showBlogCtrl.post.images">
+  <div class="center-block" ng-repeat="img in showBlogCtrl.post.images track by $index">
     <img ng-src="{{img}}" alt="{{showBlogCtrl.post.title}} - Rooted and Wild Co." class="img-responsive blog-img">
   </div>
 

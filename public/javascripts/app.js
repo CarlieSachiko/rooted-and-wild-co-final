@@ -2,25 +2,25 @@
 'use strict';
 
 angular.module('app', ['ui.router', 'ngAnimate', 'ngResource', 'angularUtils.directives.dirPagination'])
-  .config(configRoutes)
-  .run(runBlock);
+  .config(configRoutes);
+  // .run(runBlock);
 
-runBlock.$inject = ['$rootScope', '$state', 'UserService'];
+// runBlock.$inject = ['$rootScope', '$state', 'UserService'];
 
-function runBlock($rootScope, $state, UserService) {
-  $rootScope.$on('$stateChangeStart', function(evt, toState) {
-    if (toState.loginRequired && !UserService.isLoggedIn()) {
-      evt.preventDefault();
-      $state.go('shop.login');
-    }
-  });
-}
+// function runBlock($rootScope, $state, UserService) {
+//   $rootScope.$on('$stateChangeStart', function(evt, toState) {
+//     if (toState.loginRequired && !UserService.isLoggedIn()) {
+//       evt.preventDefault();
+//       $state.go('shop.login');
+//     }
+//   });
+// }
 
 configRoutes.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
 function configRoutes($stateProvider, $urlRouterProvider, $httpProvider) {
 
-  $httpProvider.interceptors.push('AuthInterceptor');
+  // $httpProvider.interceptors.push('AuthInterceptor');
 
   $urlRouterProvider.otherwise('/home');
 

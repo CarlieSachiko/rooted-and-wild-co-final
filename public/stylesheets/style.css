@@ -4,6 +4,14 @@
   border-radius: 0 !important;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 a {
   cursor: pointer;
   color: black;
@@ -58,7 +66,8 @@ a:hover {
 .navbar {
   background-color: white;
   border: none;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  margin-top: 15px;
   height: 140px;
   z-index: 9;
 }
@@ -130,13 +139,13 @@ div#logo-div {
 .slider {
   margin-top: -30px;
   margin-bottom: 10px;
-  height: 75vh;
+  height: 100vh;
 }
 
 .slide1,.slide2,.slide3,.slide4,.slide5 {
   position: absolute;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
 }
 
 .slide1 {
@@ -190,11 +199,12 @@ div#logo-div {
 
 /*ABOUT STATE*/
 img#about-img {
-  max-height: 400px !important;
+  /*height: 400px;*/
 }
 
 #about {
-  margin-bottom: 20vh;
+  margin-top: 10vh;
+  height: 100vh;
 }
 
 div.row.about {
@@ -203,7 +213,7 @@ div.row.about {
 
 /*CONTACT STATE*/
 #contact {
-  margin-bottom: 3vh;
+  height: 100vh;
 }
 
 div.contact-text {
@@ -219,7 +229,7 @@ div#contact-form {
 
 /*WORK STATE*/
 #work {
-  margin-bottom: 20px;
+  height: 100vh;
   margin-top: -20px;
   overflow-x: hidden;
 }
@@ -289,7 +299,7 @@ div#slider figure {
 
 /*SHOW-BLOG STATE*/
 .show-blog {
-  width: 90% !important;
+  width: 70% !important;
 }
 
 .comment-name {
@@ -325,6 +335,9 @@ div#slider figure {
   }
 
   /*ABOUT*/
+  #about-img {
+    max-height: 400px;
+  }
   #about{
     margin-bottom: 44vh !important;
   }
@@ -354,19 +367,9 @@ div#slider figure {
   div.instafeed {
     display: none;
   }
-
-  /*CONTACT*/
-  #contact {
-    margin-bottom: 22vh;
-  }
 }
 
 @media screen and (max-width:1024px) {
-  /*CONTACT*/
-  #contact {
-    margin-bottom: 41vh;
-  }
-
   /*WORK*/
   #work {
     margin-top: 5px;
@@ -378,17 +381,12 @@ div#slider figure {
   #sm-work-imgs {
     display: block !important;
   }
-
-  /*ABOUT*/
-  #about{
-    margin-bottom: 54.5vh;
-  }
 }
 
 @media screen and (min-width:1500PX) {
   /*HOME*/
   .slider {
-    height: 80vh;
+    height: 100vh;
   }
   .slide1,.slide2,.slide3,.slide4,.slide5 {
     height: 80vh;
@@ -400,19 +398,11 @@ div#slider figure {
   }
 
   /*CONTACT*/
-  #contact {
-    margin-bottom: 21.5vh;
-  }
   div.contact-text {
     width: 50%;
   }
   div#contact-form {
     width: 60%;
-  }
-
-  /*ABOUT*/
-  #about{
-    margin-bottom: 37.5vh;
   }
 
 }
