@@ -21,9 +21,5 @@
     "nodemailer": "^3.1.4",
     "sass": "^0.5.0",
     "serve-favicon": "~2.3.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1"
   }
 }

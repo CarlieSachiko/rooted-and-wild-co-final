@@ -12,7 +12,10 @@
   </div>
 
   <br>
-  <br>
+
+  <div><p ng-repeat="credit in showBlogCtrl.post.credit" class="text-center blog-credits center-block">{{credit}}</p></div>
+
+  <hr>
 
   <div class="row">
     <div class="col-xs-4">
@@ -24,11 +27,8 @@
     </div>
   </div>
 
-  <!-- <div class="row">
-    <div class="col-xs-6"><a ui-sref="blog">Back to main blog</a></div>
-    <div class="col-xs-6"><a href="javascript:" id="return-to-top" class="pull-right"><p>Back to top</p></a></div>
-  </div> -->
-  <hr>
+
+  <a href="javascript:" id="return-to-top" class="pull-left"><p>Back to top</p></a>
   <div class="row">
     <div class="col-xs-6"><a ng-show="showBlogCtrl.nextPost" ui-sref="show-blog({postTitle: showBlogCtrl.nextPost.url_title, postId: showBlogCtrl.nextPost._id})" class="blog-toggles">⟵ {{showBlogCtrl.nextPost.title}}</a></div>
     <div class="col-xs-6"><a ng-show="showBlogCtrl.prevPost" ui-sref="show-blog({postTitle: showBlogCtrl.prevPost.url_title, postId: showBlogCtrl.prevPost._id})" class="pull-right blog-toggles">{{showBlogCtrl.prevPost.title}} ⟶</a></div>
@@ -47,6 +47,7 @@
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   </div>
+
   <hr>
 
   <div class="comments" ng-repeat="comment in showBlogCtrl.post.comments track by $index">
@@ -63,7 +64,7 @@
 <script type="text/javascript">
     $('#return-to-top').click(function() {
       $('body,html').animate({
-          scrollTop : 0                       // Scroll to top of body
+          scrollTop : 0
       }, 500);
     });
 </script>

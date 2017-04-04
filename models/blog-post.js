@@ -15,7 +15,8 @@ var blogPostSchema = new mongoose.Schema({
   likes: Number,
   images:[String],
   createdAt: {type: Date, default: Date.now},
-  date: String
+  date: String,
+  credit: [String]
 });
 
 

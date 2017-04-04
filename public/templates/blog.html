@@ -1,4 +1,5 @@
 <div id="blog" class="container">
+<div ng-bind-html-unsafe="blogCtrl.testHTML">{{testHTML}}</div>
   <div class="row">
     <div class="col-sm-9">
       <div dir-paginate="post in blogCtrl.posts | itemsPerPage: 3 | orderBy: 'post.createdAt':true track by $index">
@@ -9,7 +10,7 @@
         <img ng-repeat="img in post.images | limitTo:1" ng-src="{{img}}" alt="{{post.title}} - Rooted and Wild Co." class="blog-img">
         <br>
         <br>
-        <p ng-repeat="paragraph in post.paragraphs | limitTo:1">{{paragraph}}</p>
+        <p ng:repeat="paragraph in post.paragraphs | limitTo:1" ng-bind-html-unsafe="paragraph">{{paragraph}}</p>
         <p><a ui-sref="show-blog({postTitle: post.url_title, postId: post._id})">Read more</a></p>
 
         <div>
