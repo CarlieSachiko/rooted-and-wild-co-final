@@ -4,7 +4,7 @@
   <h2>{{showBlogCtrl.post.title}}</h2>
   <p>{{showBlogCtrl.post.date}}</p>
   <hr>
-  <p ng-repeat="paragraph in showBlogCtrl.post.paragraphs">{{paragraph}}</p>
+  <p ng:repeat="paragraph in showBlogCtrl.post.paragraphs" ng-bind-html="paragraph">{{paragraph}}</p>
   <p>Cheers, <br>Mackenzie</p>
 
   <div class="center-block" ng-repeat="img in showBlogCtrl.post.images track by $index">
@@ -13,7 +13,7 @@
 
   <br>
 
-  <div><p ng-repeat="credit in showBlogCtrl.post.credit" class="text-center blog-credits center-block">{{credit}}</p></div>
+  <div><p ng:repeat="credit in showBlogCtrl.post.credit" ng-bind-html="credit" class="text-center blog-credits center-block">{{credit}}</p></div>
 
   <hr>
 

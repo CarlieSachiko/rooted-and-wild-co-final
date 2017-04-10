@@ -1,7 +1,7 @@
 (function() {
 'use strict';
 
-angular.module('app', ['ui.router', 'ngAnimate', 'ngResource', 'angularUtils.directives.dirPagination'])
+angular.module('app', ['ui.router', 'ngAnimate', 'ngResource', 'angularUtils.directives.dirPagination', 'ngSanitize'])
   .config(configRoutes);
   // .run(runBlock);
 

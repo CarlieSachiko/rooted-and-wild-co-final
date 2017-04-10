@@ -1,24 +1,29 @@
 <div id="blog" class="container">
-<div ng-bind-html-unsafe="blogCtrl.testHTML">{{testHTML}}</div>
   <div class="row">
     <div class="col-sm-9">
-      <div dir-paginate="post in blogCtrl.posts | itemsPerPage: 3 | orderBy: 'post.createdAt':true track by $index">
+      <div dir-paginate="post in blogCtrl.posts | orderBy: 'post.createdAt':true | itemsPerPage: 3 track by $index">
         <a ui-sref="show-blog({postTitle: post.url_title, postId: post._id})"><h3>{{post.title}}</h3></a>
         <p>{{post.date}}</p>
+
         <hr>
 
         <img ng-repeat="img in post.images | limitTo:1" ng-src="{{img}}" alt="{{post.title}} - Rooted and Wild Co." class="blog-img">
+
         <br>
         <br>
-        <p ng:repeat="paragraph in post.paragraphs | limitTo:1" ng-bind-html-unsafe="paragraph">{{paragraph}}</p>
+
+        <p ng:repeat="paragraph in post.paragraphs | limitTo:1" ng-bind-html="paragraph">{{paragraph}}</p>
         <p><a ui-sref="show-blog({postTitle: post.url_title, postId: post._id})">Read more</a></p>
 
         <div>
           <span ng-click="blogCtrl.addLike(post)" class="glyphicon glyphicon-heart" aria-hidden="true"></span> {{post.likes}} Likes |
           <a ui-sref="show-blog({postId: post._id})"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> ({{post.comments.length}}) Comments </a>
         </div>
+
         <hr>
+
         <br>
+
       </div>
     </div>
 

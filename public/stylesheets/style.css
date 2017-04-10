@@ -296,6 +296,11 @@ div#slider figure {
   color: black !important;
 }
 
+.blog-links {
+  /*color: grey;*/
+  text-decoration: underline;
+}
+
 /*SHOW-BLOG STATE*/
 .show-blog {
   width: 70% !important;

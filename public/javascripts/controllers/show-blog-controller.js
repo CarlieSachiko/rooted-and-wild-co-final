@@ -6,12 +6,8 @@ ShowBlogController.$inject = ['$http', '$stateParams', 'BlogService', 'CommentSe
 function ShowBlogController($http, $stateParams, BlogService, CommentService, LikeService, AddCommentService) {
   var vm = this;
 
-  // vm.posts = BlogService.query();
-  // console.log(vm.posts)
-
   if ($stateParams.postId) {
     BlogService.get({id: $stateParams.postId}, function(results) {
-      console.log(results);
       vm.post = results.showPost;
       vm.nextPost = results.nextPost
       vm.prevPost = results.prevPost;

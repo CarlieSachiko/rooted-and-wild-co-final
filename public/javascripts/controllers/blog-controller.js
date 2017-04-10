@@ -1,15 +1,11 @@
 angular.module('app')
   .controller('BlogController', BlogController);
 
-BlogController.$inject = ['BlogService', 'LikeService'];
+BlogController.$inject = ['BlogService', 'LikeService', '$sce'];
 
-function BlogController(BlogService, LikeService) {
+function BlogController(BlogService, LikeService, $sce) {
   var vm = this;
   vm.posts = BlogService.query();
-
-  console.log(vm.posts)
-
-  vm.testHTML = "<p>HI</p>";
 
   vm.addLike = function(post) {
     if (LikeService.addLike(post._id)) {
