@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Rooted & Wild Floral Design by Mackenzie Myers' });
+  res.render('index', { title: 'Rooted & Wild | Floral Design Co' });
 });
 
 module.exports = router;
