@@ -301,6 +301,17 @@ div#slider figure {
   text-decoration: underline;
 }
 
+.ig-img {
+  max-width: 131.25px;
+}
+
+#instafeed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 /*SHOW-BLOG STATE*/
 .show-blog {
   width: 70% !important;

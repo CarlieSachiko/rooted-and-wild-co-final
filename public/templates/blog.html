@@ -28,12 +28,14 @@
       </div>
     </div>
 
-    <div class="col-sm-3 pull-right instafeed">
+    <div class="col-sm-3 pull-right">
       <h4>Connect</h4>
-      <div class="row" id="instafeed"></div>
-      <span><a href="https://www.pinterest.com/rootedandwildco/" target="blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Co Pinterest"></a></span>
-      <span><a href="https://www.facebook.com/Rooted-and-WIld-1869870699962400/" target="blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Co Facebook"></a></span>
-      <span><a href="https://instagram.com/rootedandwild" target="blank"><img id="ig" src="images/ig-logo.png" alt="Rooted and Wild Co IG"></a></span>
+      <div id="instafeed"></div>
+      <div class="social-icons">
+        <span><a href="https://www.pinterest.com/rootedandwildco/" target="blank"><img id="pinterest" src="images/pinterest-logo.jpg" alt="Rooted and Wild Co Pinterest"></a></span>
+        <span><a href="https://www.facebook.com/Rooted-and-WIld-1869870699962400/" target="blank"><img id="fb" src="images/fb-logo.jpg" alt="Rooted and Wild Co Facebook"></a></span>
+        <span><a href="https://instagram.com/rootedandwild" target="blank"><img id="ig" src="images/ig-logo.png" alt="Rooted and Wild Co IG"></a></span>
+      </div>
     </div>
 
   </div>
@@ -48,7 +50,7 @@
         userId: '9027393',
         accessToken: '9027393.a4dc5b5.6c58357074074dc2a7c8a0c2c04cfc70',
         resolution: 'thumbnail',
-        template: '<a class="col-sm-6" href="{{link}}"><img src="{{image}}" /></a>',
+        template: '<a href="{{link}}"><img class="img-responsive ig-img pull-right" alt={{caption}} src="{{image}}"/></a>',
         limit: 8,
     });
     userFeed.run();
